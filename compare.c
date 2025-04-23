@@ -17,7 +17,7 @@ int main(void)
     {
         printf("x is greater than y\n");
     }
-    else if (num1 == num2)
+    else
     {
         printf("Both numbers are equal.");
     }
