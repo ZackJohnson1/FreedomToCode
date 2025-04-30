@@ -4,12 +4,7 @@ int get_gridsize(void);
 
 int main(void)
 {
-    int grid_size;
-    grid_size = get_gridsize();
-    if (grid_size < 1)
-    {
-        printf("Error: Choose a valid number.\n");
-    }
+    int grid_size = get_gridsize();
 
     for (int i = 0; i < grid_size; i++)
     {
@@ -24,8 +19,15 @@ int main(void)
 
 int get_gridsize(void)
 {
-    int x;
-    printf("Enter Gridsize: ");
-    scanf("%d", &x);
+    int x = 0;
+    while (x < 1)
+    {
+        printf("Enter Gridsize: ");
+        scanf("%d", &x);
+        if (x < 1)
+        {
+            printf("ERROR: Please enter a valid number.\n");
+        }
+    }
     return(x);
 }
