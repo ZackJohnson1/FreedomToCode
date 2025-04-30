@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h> // for toupper
 
 // Function prototypes
 char get_operation(void);
@@ -7,7 +8,8 @@ void perform_subtraction(int a, int b);
 void perform_multiplication(int a, int b);
 void perform_division(int a, int b);
 
-int main(void) {
+int main(void) 
+{
     int x, y;
     char choice;
 
@@ -21,19 +23,15 @@ int main(void) {
 
     switch (choice) {
         case 'A':
-        case 'a':
             perform_addition(x, y);
             break;
         case 'S':
-        case 's':
             perform_subtraction(x, y);
             break;
         case 'M':
-        case 'm':
             perform_multiplication(x, y);
             break;
         case 'D':
-        case 'd':
             perform_division(x, y);
             break;
         default:
@@ -43,26 +41,32 @@ int main(void) {
     return 0;
 }
 
-char get_operation(void) {
+
+char get_operation(void) 
+{
     char op;
     printf("Choose an operation (A = Addition, S = Subtraction, M = Multiplication, D = Division): ");
-    scanf(" %c", &op); // Skip leading whitespace
-    return op;
+    scanf(" %c", &op);
+    return toupper(op);  // Normalize to uppercase so main doesn't need to handle cases
 }
 
-void perform_addition(int a, int b) {
+void perform_addition(int a, int b) 
+{
     printf("Result: %d\n", a + b);
 }
 
-void perform_subtraction(int a, int b) {
+void perform_subtraction(int a, int b) 
+{
     printf("Result: %d\n", a - b);
 }
 
-void perform_multiplication(int a, int b) {
+void perform_multiplication(int a, int b) 
+{
     printf("Result: %d\n", a * b);
 }
 
-void perform_division(int a, int b) {
+void perform_division(int a, int b) 
+{
     if (b != 0)
         printf("Result: %.2f\n", (float)a / b);
     else
