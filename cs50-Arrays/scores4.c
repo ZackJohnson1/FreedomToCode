@@ -11,3 +11,4 @@ int main(void)
 
     printf("Averages: %f\n", (scores[0] + scores[1] + scores[2]) / (float) N);
 }
+bbb
