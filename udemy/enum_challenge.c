@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+
 enum Company {
     GOOGLE,
     FACEBOOK, 
@@ -17,4 +19,6 @@ int main()
     printf("%d\n", companyA);
     printf("%d\n", companyB);
     printf("%d\n", companyC);
+
+    return 0;
 }
