@@ -10,6 +10,7 @@ int main (void)
     perimeter = 2.0 * (height + width);
     area = width * height;
 
-    printf("The perimeter is: %g\n", perimeter);
-    printf("The area is: %g\n", area);
+    printf("Rectangle Program\nWidth: %.2f\nHeight: %2f\n", width, height);
+    printf("The perimeter is: %.2f\n", perimeter);
+    printf("The area is: %.2f\n", area);
 }
