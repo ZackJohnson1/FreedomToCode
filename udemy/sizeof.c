@@ -9,12 +9,12 @@ int main()
     double _double;
     long double _longDouble;
 
-    printf("int: %zd\n", sizeof(_int));
-    printf("char: %zd\n", sizeof(_char));
-    printf("long: %zd\n", sizeof(_long));
-    printf("long long: %zd\n", sizeof(_longLong));
-    printf("double: %zd\n", sizeof(_double));
-    printf("long double: %zd\n", sizeof(_longDouble));
+    printf("int: %zu\n", sizeof(_int));
+    printf("char: %zu\n", sizeof(_char));
+    printf("long: %zu\n", sizeof(_long));
+    printf("long long: %zu\n", sizeof(_longLong));
+    printf("double: %zu\n", sizeof(_double));
+    printf("long double: %zu\n", sizeof(_longDouble));
 
     return 0;
 }
