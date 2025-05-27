@@ -27,4 +27,6 @@ int main()
     {
         printf("You worked no hours this week!\n");
     }
+    
+    return 0;
 }
